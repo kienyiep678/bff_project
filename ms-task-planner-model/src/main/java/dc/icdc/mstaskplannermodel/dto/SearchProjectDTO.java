@@ -1,4 +1,4 @@
-package dc.icdc.mstaskplannermodel.dto;
+package  dc.icdc.mstaskplannermodel.dto;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class SearchProjectRequest {
+public class SearchProjectDTO {
     @JsonProperty(value = "sort_type")
     private String sortType;
     @JsonProperty(value = "filter_project_status")

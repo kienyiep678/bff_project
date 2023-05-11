@@ -1,15 +1,18 @@
 package dc.icdc.mstaskplannermodel.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import lombok.*;
 
 import java.util.Date;
 
 @Data
-public class ProjectDetailsResponse {
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Getter
+public class ProjectLessDTO {
 
-    public ProjectDetailsResponse(String id, String projName, String startDate, String endDate, String pic, String projStatus, String priority, String projType, String accName, int roles, Date createdDate) {
+    public ProjectLessDTO(String id, String projName, String startDate, String endDate, String pic, String projStatus, String priority, String projType, String accName, int roles, Date createdDate) {
         this.id = id;
         this.projName = projName;
         this.startDate = startDate;
@@ -18,7 +21,7 @@ public class ProjectDetailsResponse {
         this.projStatus = projStatus;
         this.priority = priority;
         this.projType = projType;
-        this.Roles = roles;
+        this.roles = roles;
         this.accName = accName;
         this.createdDate = createdDate;
 
@@ -41,10 +44,9 @@ public class ProjectDetailsResponse {
     @JsonProperty(value ="project_type")
     private String projType;
     @JsonProperty(value ="roles_total")
-    private int Roles;
+    private int roles;
     @JsonProperty(value = "account_name")
     private String accName;
-
     @JsonProperty(value = "created_date")
     private Date createdDate;
 
