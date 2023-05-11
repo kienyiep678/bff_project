@@ -2,10 +2,14 @@ package dc.idc.bff.msbffrmsservice.controller;
 
 //import dc.icdc.domain.technicalprofile.model.dto.CreateTechProfileRequest;
 import dc.icdc.lib.common.model.dto.CommonResponse;
-import dc.icdc.mstaskplannermodel.dto.SearchProjectRequest;
+import dc.icdc.mstaskplannermodel.dto.ProjectLessDTO;
+import dc.icdc.mstaskplannermodel.dto.SearchProjectDTO;
+//import dc.icdc.mstaskplannermodel.dto.SearchProjectRequest;
 import dc.icdc.mstaskplannersdk.service.CreateTaskSdk;
 import dc.idc.bff.msbffrmsservice.service.TechnicalProfileService;
 import lombok.extern.slf4j.Slf4j;
+
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +20,7 @@ import org.springframework.web.bind.annotation.*;
 public class TechnicalProfileController {
 private TechnicalProfileService technicalProfileService;
     @PostMapping("/search")
-    public CommonResponse<SearchProjectRequest> createNewTechnicalProfile(@RequestBody SearchProjectRequest request) {
+    public CommonResponse<Page<ProjectLessDTO>> createNewTechnicalProfile(@RequestBody SearchProjectDTO request) {
         return technicalProfileService.searchTaskRequest(request);
     }
 }
