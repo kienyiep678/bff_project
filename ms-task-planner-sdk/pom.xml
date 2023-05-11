@@ -18,11 +18,7 @@
 	</properties>
 	<dependencies>
 
-		<dependency>
-			<groupId>dc.icdc</groupId>
-			<artifactId>ms-task-planner-sdk</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+	
 
 		<dependency>
 			<groupId>dc.icdc</groupId>
